@@ -1,1 +1,28 @@
+Built a custom Excel dashboard and integrated data from over 10 internal sources which streamlined data
+access and tracking for a team of 15 members. This tool reduced workbook completion time by 20-40%, significantly
+enhancing team productivity and workflow efficiency.
+
+Features:
+
+Custom Matching Hyperlink Icons to Take You to Desired Location of Workbook
+
+Expanded Pivot Table from Oracle CSV File interactive and altered by the change of client name.
+
+Conditional Formatting Yes/No connected to more than 10 Sharepoint files as client name changes, the answers change based on the matching client name and id.
+
+Added new column next to pivot table to eliminate looking up each sub product, adjusted by index match formula to find matching product group with sharepoint document.
+
+Search feature box that allows you to search within a specific document in sharepoint, giving you several options as long as the word appears, conditional formatting to help you locate duplicates, and locate matching product group.
+
+Smaller pivot tables, to reduce unncessary colunns and only show the items needed to answer required question for those that did not want to use the search feature. Conditional formatting to let you know if a duplicate was found so you would not add in error.
+
+Links that connect and show you if a matching contract exists by client name, number, and type of contract.
+
+Additional links necessary for each section to eliminate confusion.
+
+Email automation and client account owner and email, once link is selected the correct subject line appears for that specific day and sequence.
+
+
+
+
 

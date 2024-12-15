@@ -3,7 +3,7 @@
 Custom projects created and implemented by clients. Some information is not available due to confidentiality.
 All of the images are on one excel book.
 
-Placement of images
+Placement of images <br>
 Project icons image is located on the far left side of the workbook, when clicked it will go to the option on the workbook. Logo implemented on the top.
 
 Project 1-1 image  (Legend) is located next to the images

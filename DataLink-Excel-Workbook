@@ -1,5 +1,5 @@
 Built a custom Excel dashboard and integrated data from over 10 internal sources which streamlined data
-access and tracking for a team of 15 members. This tool reduced workbook completion time by 20-40%, significantly
+access and tracking for a team of 15 members. This tool reduced workbook and project completion time by 20-40%, significantly
 enhancing team productivity and workflow efficiency.
 
 Features:
@@ -23,7 +23,49 @@ Additional links necessary for each section to eliminate confusion.
 Email automation and client account owner and email, once link is selected the correct subject line appears for that specific day and sequence.
 
 
-Tool Solved the Following Problems:
+Excel Formulas:
+
+1) For Y/N:
+
+=IF(ISNUMBER(MATCH(I5,'External Microsoft Teams Channe'!$D$2:$D$517,0)), "Yes", "No"), added conditional formatting for Yes (green), No (red)
+
+
+2) To display value from another sheet:
+
+=IFERROR(INDEX(Source_Data!Z1:Z4926, MATCH(I5, Source_Data!F1:F4926, 0)), "Not listed")
+
+=INDEX(Source_Data!$S$2:$S$4927, MATCH(G5, Source_Data!$E$2:$E$4927, 0))
+ 
+
+3) For Product Line match to Group/Subgroup: 
+
+=IFERROR(INDEX('Product Master 1'!$B$1:$B$1934,MATCH(F8,'Product Master 1'!$E$1:$E$1934,0)),"")
+
+
+4) To show results if a contract is there and add the name of contract: 
+
+=IFERROR(INDEX('Client Profile_Agreement Links'!J2:J687, MATCH(I5, 'Client Profile_Agreement Links'!F2:F687, 0)), "Search MShare")
+
+
+5) Created a search box tool (like Google Search) that comes back with results as long as name appears:
+
+=IFERROR(FILTER(Table715, ISNUMBER(SEARCH(K12,Table715[Product Subgroup])),"Check Product Master Search"), "Check Product Master Search")
+
+ 
+6) Conditional formatting if found a match:
+
+=IF(ISNUMBER(MATCH(V13,$F$2:$F$517,0)), "Already Added or Add to 'Actual Prod Sub-Group'", "No Exact Match")
+
+ 
+7) Email automation with email and subject line added, when pressed, an email opens with the person's email and includes a subject line:
+
+=HYPERLINK(mailto: & AA8 & "?Subject=No Agreement/No Billing", "Send email")
+
+=HYPERLINK(mailto: & AA7& "?Subject=Client Profile | Validation Call Prep", "Send email")
+
+
+
+Tool Solved the Following Business Problems:
 
 
 1) Each team member had to pull their own billing reports from Oracle, with this tool this was no longer necessary for them to do. The tool is an empty shell, so the solution was to intergrate everyone's biling report by sprint so anyone on the team could use it for that sprint.
